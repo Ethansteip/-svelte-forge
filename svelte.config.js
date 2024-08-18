@@ -9,6 +9,8 @@ const config = {
 		adapter: adapter({
 			out: 'build',
 			precompress: false,
+			// Optionally you can set the environment variable defaults here
+			envPrefix: ['VITE_', 'RAILWAY_'],
 			env: {
 				port: process.env.PORT || 3000,
 				host: '0.0.0.0'
