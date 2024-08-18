@@ -41,6 +41,7 @@
 	"dependencies": {
 		"bits-ui": "^0.21.13",
 		"clsx": "^2.1.1",
+		"express": "^4.19.2",
 		"lucide-svelte": "^0.416.0",
 		"mode-watcher": "^0.4.0",
 		"svelte-sonner": "^0.3.27",
