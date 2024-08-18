@@ -7,7 +7,12 @@ const config = {
 
 	kit: {
 		adapter: adapter({
-			out: 'build' // Specify the output directory
+			out: 'build',
+			precompress: false,
+			env: {
+				port: process.env.PORT || 3000,
+				host: '0.0.0.0'
+			}
 		})
 	}
 };
