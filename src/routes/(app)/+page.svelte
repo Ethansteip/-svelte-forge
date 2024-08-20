@@ -4,7 +4,7 @@
 	import { env } from '$env/dynamic/public';
 
 	const testFetch = async () => {
-		const response = await fetch(env.PUBLIC_SVELTE_BUILDER_API_URL + '/hello');
+		const response = await fetch(`/${env.PUBLIC_SVELTE_BUILDER_API_URL}/hello`);
 		const data = await response.json();
 		console.log('Data: ', data);
 	};
