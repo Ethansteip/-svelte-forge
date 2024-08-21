@@ -6,7 +6,7 @@
 
 	const testFetch = async () => {
 		loading = true;
-		const response = await fetch('/api/hello');
+		const response = await fetch('/api/start-container');
 		const data = await response.json();
 		console.log('Data: ', data);
 		loading = false;
