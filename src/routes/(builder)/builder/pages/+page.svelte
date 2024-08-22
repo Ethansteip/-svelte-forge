@@ -35,7 +35,11 @@
 			class:w-[45rem]={$togglePreviewSize === 'Tablet'}
 			class:w-full={$togglePreviewSize === 'Desktop'}
 		>
-			<iframe src="http://localhost:5173/test" title="iframe" class="h-full w-full"></iframe>
+			<iframe
+				src={`${env.PUBLIC_SVELTE_BUILDER_API_URL} + /test`}
+				title="iframe"
+				class="h-full w-full"
+			></iframe>
 		</section>
 	{/if}
 </main>
