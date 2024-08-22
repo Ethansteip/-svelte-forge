@@ -34,7 +34,7 @@
 			class:w-[45rem]={$togglePreviewSize === 'Tablet'}
 			class:w-full={$togglePreviewSize === 'Desktop'}
 		>
-			<iframe src="http://localhost:5174/" title="iframe" class="h-full w-full"></iframe>
+			<iframe src="http://localhost:5173/test" title="iframe" class="h-full w-full"></iframe>
 		</section>
 	{/if}
 </main>
