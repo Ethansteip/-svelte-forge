@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { togglePreviewSize } from '$lib/stores/togglePreviewSize';
+	import { env } from '$env/dynamic/public';
 	import { onMount } from 'svelte';
 	import { Rocket } from 'lucide-svelte';
 	import { toast } from 'svelte-sonner';
