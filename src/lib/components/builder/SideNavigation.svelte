@@ -2,7 +2,7 @@
 	import Button from '../ui/button/button.svelte';
 	import * as Tooltip from '$lib/components/ui/tooltip';
 	import { page } from '$app/stores';
-	import { Paintbrush2, Layers2, Zap, Database } from 'lucide-svelte';
+	import { Paintbrush2, Layers2, Zap, Database, Anvil } from 'lucide-svelte';
 </script>
 
 <div class="flex h-full w-16 flex-col items-center justify-between border-r py-3">
@@ -13,7 +13,7 @@
 					builders={[builder]}
 					size="icon"
 					variant={$page.url.pathname === '/builder/whats-your-style' ? 'default' : 'outline'}
-					href="/builder/whats-your-style"><Paintbrush2 /></Button
+					href="/builder/whats-your-style"><Anvil /></Button
 				>
 			</Tooltip.Trigger>
 			<Tooltip.Content>

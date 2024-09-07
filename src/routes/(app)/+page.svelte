@@ -15,7 +15,7 @@
 
 <main class=" flex h-screen w-full flex-col items-center justify-center">
 	<h1 class="w-full text-center text-4xl font-extrabold tracking-tight lg:text-5xl">
-		Welcome to SvelteForge
+		Welcome to Svelte-Forge
 	</h1>
 	<div class="mt-3 flex w-full flex-col items-center justify-center gap-y-2">
 		<h2 class="w-full text-center text-xl">Web development starter kits, built your way.</h2>
