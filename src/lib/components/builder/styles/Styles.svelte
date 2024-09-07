@@ -4,10 +4,10 @@
 	import { Input } from '$lib/components/ui/input/index.js';
 	import * as Card from '$lib/components/ui/card/index.js';
 	import * as Select from '$lib/components/ui/select/index.js';
-	import { Skull, Flower, SwatchBook, Wind } from 'lucide-svelte';
+	import { Flower, SwatchBook, Wind } from 'lucide-svelte';
 	import { toggleUiLibrary } from '$lib/stores/uiLibrary';
-	import * as ToggleGroup from '$lib/components/ui/toggle-group';
 	import * as RadioGroup from '$lib/components/ui/radio-group';
+	import ThemeSwitcher from '../ThemeSwitcher.svelte';
 
 	const frameworks = [
 		{
@@ -100,6 +100,9 @@
 									Tailwind
 								</Label>
 							</RadioGroup.Root>
+						</div>
+						<div class="flex flex-col space-y-1.5">
+							<ThemeSwitcher />
 						</div>
 					</div>
 				</Card.Content>
