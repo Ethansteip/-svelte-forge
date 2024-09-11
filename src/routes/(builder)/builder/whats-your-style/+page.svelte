@@ -7,9 +7,9 @@
 
 <section
 	id="preview-container"
-	class="preview-container flex h-[100%] w-[100%] flex-col items-center justify-center gap-3"
+	class="flex h-[100%] w-[100%] flex-col items-center justify-center gap-3"
 >
-	<h1 class="text-3xl font-semibold">{$toggleUiLibrary}</h1>
+	<h1 class="text-4xl">Component Preview</h1>
 	{#if $toggleUiLibrary === 'shad'}
 		<ShadPreview />
 	{:else if $toggleUiLibrary === 'daisy'}

@@ -68,7 +68,7 @@
 	}
 
 	/* Scoped styles for the preview page */
-	[data-preview-theme='light'] {
+	[data-theme='light'] {
 		--background: 0 0% 100%;
 		--foreground: 222.2 84% 4.9%;
 
@@ -101,7 +101,7 @@
 		--radius: 0.5rem;
 	}
 
-	[data-preview-theme='dark'] {
+	[data-theme='dark'] {
 		--background: 222.2 84% 4.9%;
 		--foreground: 210 40% 98%;
 
@@ -132,7 +132,30 @@
 		--ring: hsl(212.7, 26.8%, 83.9);
 	}
 
-	[data-preview-theme='red'] {
+	[data-theme='blue'] {
+		--background: 0 0% 100%;
+		--foreground: 222.2 84% 4.9%;
+		--card: 0 0% 100%;
+		--card-foreground: 222.2 84% 4.9%;
+		--popover: 0 0% 100%;
+		--popover-foreground: 222.2 84% 4.9%;
+		--primary: 221.2 83.2% 53.3%;
+		--primary-foreground: 210 40% 98%;
+		--secondary: 210 40% 96.1%;
+		--secondary-foreground: 222.2 47.4% 11.2%;
+		--muted: 210 40% 96.1%;
+		--muted-foreground: 215.4 16.3% 46.9%;
+		--accent: 210 40% 96.1%;
+		--accent-foreground: 222.2 47.4% 11.2%;
+		--destructive: 0 72.22% 50.59%;
+		--destructive-foreground: 210 40% 98%;
+		--border: 214.3 31.8% 91.4%;
+		--input: 214.3 31.8% 91.4%;
+		--ring: 221.2 83.2% 53.3%;
+		--radius: 0rem;
+	}
+
+	[data-theme='red'] {
 		--background: 0 0% 100%;
 		--foreground: 240 10% 3.9%;
 		--card: 0 0% 100%;
@@ -152,7 +175,154 @@
 		--border: 240 5.9% 90%;
 		--input: 240 5.9% 90%;
 		--ring: 346.8 77.2% 49.8%;
-		--radius: 0.5rem;
+		--radius: 0rem;
+	}
+
+	[data-theme='dracula'] {
+		--background: 231 15% 20%; /* Base-100: #282a36 */
+		--foreground: 60 30% 98%; /* Base-content: #f8f8f2 */
+		--card: 231 15% 20%; /* Base-100: #282a36 */
+		--card-foreground: 60 30% 98%; /* Base-content: #f8f8f2 */
+		--popover: 231 15% 20%; /* Base-100: #282a36 */
+		--popover-foreground: 60 30% 98%; /* Base-content: #f8f8f2 */
+		--primary: 326 100% 72%; /* Primary: #ff79c6 */
+		--primary-foreground: 60 30% 98%; /* Base-content: #f8f8f2 */
+		--secondary: 265 88% 80%; /* Secondary: #bd93f9 */
+		--secondary-foreground: 60 30% 98%; /* Base-content: #f8f8f2 */
+		--accent: 28 100% 72%; /* Accent: #ffb86c */
+		--accent-foreground: 60 30% 98%; /* Base-content: #f8f8f2 */
+		--neutral: 231 15% 30%; /* Neutral: #414558 */
+		--muted: 231 15% 30%; /* Neutral: #414558 */
+		--muted-foreground: 60 30% 98%; /* Base-content: #f8f8f2 */
+		--destructive: 0 100% 67%; /* Error: #ff5555 */
+		--destructive-foreground: 60 30% 98%; /* Base-content: #f8f8f2 */
+		--success: 136 100% 64%; /* Success: #50fa7b */
+		--info: 191 96% 72%; /* Info: #8be9fd */
+		--warning: 64 96% 74%; /* Warning: #f1fa8c */
+		--border: 231 15% 30%; /* Neutral: #414558 */
+		--input: 231 15% 30%; /* Neutral: #414558 */
+		--ring: 326 100% 72%; /* Primary: #ff79c6 */
+		--radius: 0.25rem; /* Default border radius, adjust as needed */
+	}
+
+	[data-theme='cupcake'] {
+		--background: 30 33% 96%; /* Base-100: #faf7f5 */
+		--foreground: 282 51% 14%; /* Base-content: #291334 */
+		--card: 30 33% 96%; /* Base-100: #faf7f5 */
+		--card-foreground: 282 51% 14%; /* Base-content: #291334 */
+		--popover: 30 33% 96%; /* Base-100: #faf7f5 */
+		--popover-foreground: 282 51% 14%; /* Base-content: #291334 */
+		--primary: 183 46% 59%; /* Primary: #65c3c8 */
+		--primary-foreground: 282 51% 14%; /* Base-content: #291334 */
+		--secondary: 336 68% 77%; /* Secondary: #ef9fbc */
+		--secondary-foreground: 282 51% 14%; /* Base-content: #291334 */
+		--accent: 34 83% 60%; /* Accent: #eeaf3a */
+		--accent-foreground: 282 51% 14%; /* Base-content: #291334 */
+		--neutral: 282 51% 14%; /* Neutral: #291334 */
+		--muted: 282 51% 14%; /* Neutral: #291334 */
+		--muted-foreground: 30 33% 96%; /* Base-100: #faf7f5 */
+		--destructive: 0 100% 67%; /* Use similar color for 'error', such as #ff5555 */
+		--destructive-foreground: 282 51% 14%; /* Base-content: #291334 */
+		--success: 136 100% 64%; /* Success: #50fa7b (similar to the default success color) */
+		--info: 191 96% 72%; /* Info: #8be9fd (similar to the default info color) */
+		--warning: 44 100% 66%; /* Warning: #f1fa8c (close to the default warning color) */
+		--border: 30 30% 90%; /* Base-300: #e7e2df */
+		--input: 30 30% 90%; /* Base-300: #e7e2df */
+		--ring: 183 46% 59%; /* Primary: #65c3c8 */
+		--radius: 1.9rem; /* Rounded button: 1.9rem */
+		--tab-border: 2px; /* Tab border width */
+		--tab-radius: 0.7rem; /* Tab border radius */
+	}
+
+	[data-theme='emerald'] {
+		--background: 0 0% 100%; /* Base-100: oklch(100% 0 0), equivalent to white */
+		--foreground: 216 15% 30%; /* Base-content: #333c4d */
+		--card: 0 0% 100%; /* Base-100: oklch(100% 0 0), equivalent to white */
+		--card-foreground: 216 15% 30%; /* Base-content: #333c4d */
+		--popover: 0 0% 100%; /* Base-100: oklch(100% 0 0), equivalent to white */
+		--popover-foreground: 216 15% 30%; /* Base-content: #333c4d */
+		--primary: 142 51% 62%; /* Primary: #66cc8a */
+		--primary-foreground: 149 24% 19%; /* Primary-content: #223D30 */
+		--secondary: 220 95% 61%; /* Secondary: #377cfb */
+		--secondary-foreground: 0 0% 100%; /* Secondary-content: #fff */
+		--accent: 12 88% 69%; /* Accent: #f68067 */
+		--accent-foreground: 0 0% 0%; /* Accent-content: #000 */
+		--neutral: 216 15% 30%; /* Neutral: #333c4d */
+		--neutral-foreground: 210 30% 97%; /* Neutral-content: #f9fafb */
+		--muted: 216 15% 30%; /* Neutral: #333c4d */
+		--muted-foreground: 210 30% 97%; /* Neutral-content: #f9fafb */
+		--destructive: 0 100% 67%; /* A typical error color, similar to #ff5555 */
+		--destructive-foreground: 0 0% 100%; /* Set to white for better contrast on destructive */
+		--success: 142 51% 62%; /* Success: #66cc8a (same as primary) */
+		--info: 210 70% 75%; /* A typical info color */
+		--warning: 40 90% 60%; /* A typical warning color */
+		--border: 216 15% 30%; /* Neutral: #333c4d */
+		--input: 216 15% 30%; /* Neutral: #333c4d */
+		--ring: 142 51% 62%; /* Primary: #66cc8a */
+		--radius: 0.25rem; /* Default border radius, adjust as needed */
+		--animation-btn: 0; /* Custom animation setting */
+		--animation-input: 0; /* Custom animation setting */
+		--btn-focus-scale: 1; /* Custom focus scale */
+	}
+
+	[data-theme='night'] {
+		--background: 222 84% 9%; /* Base-100: #0F172A */
+		--foreground: 0 0% 100%; /* Info-content: #000000 set to white for foreground */
+		--card: 222 84% 9%; /* Base-100: #0F172A */
+		--card-foreground: 0 0% 100%; /* Info-content: #000000 set to white for foreground */
+		--popover: 222 84% 9%; /* Base-100: #0F172A */
+		--popover-foreground: 0 0% 100%; /* Info-content: #000000 set to white for foreground */
+		--primary: 197 92% 64%; /* Primary: #38bdf8 */
+		--primary-foreground: 0 0% 0%; /* Set to black for better contrast on light blue */
+		--secondary: 231 80% 70%; /* Secondary: #818CF8 */
+		--secondary-foreground: 0 0% 0%; /* Set to black for better contrast */
+		--accent: 327 86% 72%; /* Accent: #F471B5 */
+		--accent-foreground: 0 0% 0%; /* Set to black for better contrast */
+		--neutral: 210 28% 16%; /* Neutral: #1E293B */
+		--neutral-foreground: 0 0% 100%; /* Set to white for contrast on dark background */
+		--muted: 210 28% 16%; /* Neutral: #1E293B */
+		--muted-foreground: 0 0% 100%; /* Set to white for muted text */
+		--destructive: 352 90% 70%; /* Error: #FB7085 */
+		--destructive-foreground: 0 0% 0%; /* Set to black for better contrast */
+		--success: 168 63% 59%; /* Success: #2DD4BF */
+		--info: 197 87% 55%; /* Info: #0CA5E9 */
+		--warning: 44 89% 64%; /* Warning: #F4BF50 */
+		--border: 210 28% 16%; /* Neutral: #1E293B */
+		--input: 210 28% 16%; /* Neutral: #1E293B */
+		--ring: 197 92% 64%; /* Primary: #38bdf8 */
+		--radius: 0.25rem; /* Default border radius, adjust as needed */
+	}
+
+	[data-theme='nord'] {
+		--background: 220 20% 94%; /* Base-100: #ECEFF4 */
+		--foreground: 220 16% 20%; /* Base-content: #2E3440 */
+		--card: 220 20% 94%; /* Base-100: #ECEFF4 */
+		--card-foreground: 220 16% 20%; /* Base-content: #2E3440 */
+		--popover: 220 20% 94%; /* Base-100: #ECEFF4 */
+		--popover-foreground: 220 16% 20%; /* Base-content: #2E3440 */
+		--primary: 213 33% 53%; /* Primary: #5E81AC */
+		--primary-foreground: 220 16% 20%; /* Base-content: #2E3440 */
+		--secondary: 210 31% 69%; /* Secondary: #81A1C1 */
+		--secondary-foreground: 220 16% 20%; /* Base-content: #2E3440 */
+		--accent: 192 47% 68%; /* Accent: #88C0D0 */
+		--accent-foreground: 220 16% 20%; /* Base-content: #2E3440 */
+		--neutral: 220 9% 35%; /* Neutral: #4C566A */
+		--neutral-foreground: 210 28% 91%; /* Neutral-content: #D8DEE9 */
+		--muted: 220 9% 35%; /* Neutral: #4C566A */
+		--muted-foreground: 210 28% 91%; /* Neutral-content: #D8DEE9 */
+		--destructive: 356 53% 60%; /* Error: #BF616A */
+		--destructive-foreground: 0 0% 100%; /* Set to white for better contrast */
+		--success: 93 29% 67%; /* Success: #A3BE8C */
+		--info: 311 28% 68%; /* Info: #B48EAD */
+		--warning: 38 77% 70%; /* Warning: #EBCB8B */
+		--border: 220 17% 86%; /* Base-300: #D8DEE9 */
+		--input: 220 17% 86%; /* Base-300: #D8DEE9 */
+		--ring: 213 33% 53%; /* Primary: #5E81AC */
+		--radius: 0.2rem; /* Default border radius, adjusted to match rounded-btn */
+		--rounded-box: 0.4rem; /* Rounded box setting */
+		--rounded-btn: 0.2rem; /* Rounded button setting */
+		--rounded-badge: 0.4rem; /* Rounded badge setting */
+		--tab-radius: 0.2rem; /* Tab radius setting */
 	}
 }
 
