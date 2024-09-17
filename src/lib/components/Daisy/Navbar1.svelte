@@ -18,17 +18,17 @@
 				</svg>
 			</div>
 			<ul
-				tabindex="0"
+				tabindex="1"
 				class="menu dropdown-content menu-sm z-[1] mt-3 w-52 rounded-box bg-base-100 p-2 shadow"
 			>
-				<li><a href="#">Homepage</a></li>
-				<li><a href="#">Portfolio</a></li>
-				<li><a href="#">About</a></li>
+				<li><a href="#id">Homepage</a></li>
+				<li><a href="#id">Portfolio</a></li>
+				<li><a href="#id">About</a></li>
 			</ul>
 		</div>
 	</div>
 	<div class="navbar-center">
-		<a href="#" class="btn btn-ghost text-xl">Svelte Forge</a>
+		<a href="#id" class="btn btn-ghost text-xl">Svelte Forge</a>
 	</div>
 	<div class="navbar-end">
 		<button class="btn btn-circle btn-ghost">
