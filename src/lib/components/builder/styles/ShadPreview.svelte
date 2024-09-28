@@ -2,8 +2,11 @@
 	import Button from '$lib/components/ui/button/button.svelte';
 	import * as Card from '$lib/components/ui/card/index.js';
 	import { Badge } from '$lib/components/ui/badge/index.js';
+	import * as Select from '$lib/components/ui/select/index.js';
 	import * as Avatar from '$lib/components/ui/avatar/index.js';
+	import * as Table from '$lib/components/ui/table/index.js';
 	import Input from '$lib/components/ui/input/input.svelte';
+	import { Label } from '$lib/components/ui/label/index.js';
 	import { DateFormatter, type DateValue, getLocalTimeZone } from '@internationalized/date';
 	import { cn } from '$lib/utils.js';
 	import { Calendar } from '$lib/components/ui/calendar/index.js';
@@ -14,12 +17,73 @@
 		Settings,
 		EllipsisVertical,
 		Search,
+		Bone,
 		Calendar as CalendarIcon
 	} from 'lucide-svelte';
 
 	const df = new DateFormatter('en-US', {
 		dateStyle: 'long'
 	});
+
+	const fruits = [
+		{ value: 'apple', label: 'Apple' },
+		{ value: 'banana', label: 'Banana' },
+		{ value: 'blueberry', label: 'Blueberry' },
+		{ value: 'grapes', label: 'Grapes' },
+		{ value: 'pineapple', label: 'Pineapple' }
+	];
+
+	const invoices = [
+		{
+			invoice: 'INV001',
+			paymentStatus: 'Paid',
+			totalAmount: '$250.00',
+			paymentMethod: 'Credit Card'
+		},
+		{
+			invoice: 'INV002',
+			paymentStatus: 'Pending',
+			totalAmount: '$150.00',
+			paymentMethod: 'PayPal'
+		},
+		{
+			invoice: 'INV003',
+			paymentStatus: 'Unpaid',
+			totalAmount: '$350.00',
+			paymentMethod: 'Bank Transfer'
+		},
+		{
+			invoice: 'INV004',
+			paymentStatus: 'Paid',
+			totalAmount: '$450.00',
+			paymentMethod: 'Credit Card'
+		},
+		{
+			invoice: 'INV005',
+			paymentStatus: 'Paid',
+			totalAmount: '$550.00',
+			paymentMethod: 'PayPal'
+		}
+	];
+
+	const animals = [
+		{
+			value: 'bobcat',
+			label: 'Bobcat'
+		},
+		{
+			value: 'sea-horse',
+			label: 'Sea-horse'
+		},
+		{
+			value: 'elephant',
+			label: 'Elephant'
+		},
+		{
+			value: 'vulture',
+			label: 'Vulture'
+		}
+	];
 
 	let value: DateValue | undefined = undefined;
 </script>
@@ -54,12 +118,12 @@
 	<!-- Customer Heading -->
 	<section class="mb-2 mt-4 flex w-full flex-col">
 		<h1 class="text-3xl font-bold tracking-wide">Customers</h1>
-		<h2 class="italic text-base-300">This is a component preview using ShadCn Svelte</h2>
+		<h2 class="italic">This is a component preview using ShadCn Svelte</h2>
 	</section>
 
 	<!-- Metrics & Date-picker -->
-	<section class="flex w-full items-center justify-between space-x-3">
-		<Card.Root class="w-1/3">
+	<section class="grid w-full grid-cols-3 gap-6">
+		<Card.Root class="transition duration-500 hover:bg-secondary">
 			<Card.Header>
 				<div class="flex w-full items-center justify-between">
 					<div>
@@ -78,7 +142,7 @@
 				</div>
 			</Card.Content>
 		</Card.Root>
-		<Card.Root class="w-1/3">
+		<Card.Root class="transition duration-500 hover:bg-secondary">
 			<Card.Header>
 				<div class="flex w-full items-center justify-between">
 					<div>
@@ -97,7 +161,7 @@
 				</div>
 			</Card.Content>
 		</Card.Root>
-		<Card.Root class="w-1/3">
+		<Card.Root class="transition duration-500 hover:bg-secondary">
 			<Card.Header>
 				<div class="flex w-full items-center justify-between">
 					<div>
@@ -118,34 +182,98 @@
 				</div>
 			</Card.Content>
 		</Card.Root>
-	</section>
-	<section class="mt-3 flex w-full items-center justify-between space-x-3">
-		<div class="flex w-1/3 items-center">
-			<Popover.Root>
-				<Popover.Trigger asChild let:builder>
-					<Button
-						variant="outline"
-						class={cn(
-							'w-[280px] justify-start text-left font-normal',
-							!value && 'text-muted-foreground'
-						)}
-						builders={[builder]}
-					>
-						<CalendarIcon class="mr-2 h-4 w-4" />
-						{value ? df.format(value.toDate(getLocalTimeZone())) : 'Pick a date'}
-					</Button>
-				</Popover.Trigger>
-				<Popover.Content class="w-auto p-0">
-					<Calendar bind:value initialFocus />
-				</Popover.Content>
-			</Popover.Root>
-		</div>
-		<div class="flex w-2/3 items-center justify-end gap-x-3 2xl:w-[30%]">
-			<Input type="email" placeholder="email" class="max-w-xs" />
+		<Popover.Root>
+			<Popover.Trigger asChild let:builder>
+				<Button
+					variant="outline"
+					class={cn('justify-start text-left font-normal', !value && 'text-muted-foreground')}
+					builders={[builder]}
+				>
+					<CalendarIcon class="mr-2 h-4 w-4" />
+					{value ? df.format(value.toDate(getLocalTimeZone())) : 'Pick a date'}
+				</Button>
+			</Popover.Trigger>
+			<Popover.Content class="w-auto p-0">
+				<Calendar bind:value initialFocus />
+			</Popover.Content>
+		</Popover.Root>
+		<Input type="email" placeholder="email" />
+		<div class="flex justify-between space-x-2">
 			<Button>
 				<Search class="mr-2 h-4 w-4" />
 				Search
 			</Button>
+			<Select.Root portal={null}>
+				<Select.Trigger class="w-[180px]">
+					<Select.Value placeholder="Select a fruit" />
+				</Select.Trigger>
+				<Select.Content>
+					<Select.Group>
+						<Select.Label>Fruits</Select.Label>
+						{#each fruits as fruit}
+							<Select.Item value={fruit.value} label={fruit.label}>{fruit.label}</Select.Item>
+						{/each}
+					</Select.Group>
+				</Select.Content>
+				<Select.Input name="favoriteFruit" />
+			</Select.Root>
 		</div>
+		<div class="col-span-2">
+			<Table.Root>
+				<Table.Header>
+					<Table.Row>
+						<Table.Head class="">Invoice</Table.Head>
+						<Table.Head>Status</Table.Head>
+						<Table.Head>Method</Table.Head>
+						<Table.Head class="text-right">Amount</Table.Head>
+					</Table.Row>
+				</Table.Header>
+				<Table.Body class="col-span-2">
+					{#each invoices as invoice, i (i)}
+						<Table.Row>
+							<Table.Cell class="font-medium">{invoice.invoice}</Table.Cell>
+							<Table.Cell>{invoice.paymentStatus}</Table.Cell>
+							<Table.Cell>{invoice.paymentMethod}</Table.Cell>
+							<Table.Cell class="text-right">{invoice.totalAmount}</Table.Cell>
+						</Table.Row>
+					{/each}
+				</Table.Body>
+			</Table.Root>
+		</div>
+		<Card.Root class="w-full">
+			<Card.Header>
+				<Card.Title>Create project</Card.Title>
+				<Card.Description>Deploy your new project in one-click.</Card.Description>
+			</Card.Header>
+			<Card.Content>
+				<form>
+					<div class="grid w-full items-center gap-4">
+						<div class="flex flex-col space-y-1.5">
+							<Label for="name">Name</Label>
+							<Input id="name" placeholder="Name of your project" />
+						</div>
+						<div class="flex flex-col space-y-1.5">
+							<Label for="framework">Animals</Label>
+							<Select.Root>
+								<Select.Trigger id="Amimals">
+									<Select.Value placeholder="Choose your animal" />
+								</Select.Trigger>
+								<Select.Content>
+									{#each animals as animal}
+										<Select.Item value={animal.value} label={animal.label}
+											>{animal.label}</Select.Item
+										>
+									{/each}
+								</Select.Content>
+							</Select.Root>
+						</div>
+					</div>
+				</form>
+			</Card.Content>
+			<Card.Footer class="flex justify-between">
+				<Button variant="outline">Cancel</Button>
+				<Button>Deploy</Button>
+			</Card.Footer>
+		</Card.Root>
 	</section>
 </section>
