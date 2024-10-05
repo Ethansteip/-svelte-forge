@@ -43,7 +43,7 @@
 				>
 			</Tooltip.Trigger>
 			<Tooltip.Content>
-				<p>Backend</p>
+				<p>Backend (coming soon)</p>
 			</Tooltip.Content>
 		</Tooltip.Root>
 	</div>

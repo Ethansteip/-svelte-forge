@@ -7,7 +7,7 @@
 
 <section
 	id="preview-container"
-	class="flex h-[100%] w-[100%] flex-col items-center justify-center gap-3"
+	class="flex h-auto w-[100%] flex-col items-center gap-3 py-12 xl:h-full"
 >
 	{#if $toggleUiLibrary === 'shad'}
 		<ShadPreview />

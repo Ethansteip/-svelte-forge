@@ -57,12 +57,6 @@
 			paymentStatus: 'Paid',
 			totalAmount: '$450.00',
 			paymentMethod: 'Credit Card'
-		},
-		{
-			invoice: 'INV005',
-			paymentStatus: 'Paid',
-			totalAmount: '$550.00',
-			paymentMethod: 'PayPal'
 		}
 	];
 
@@ -99,13 +93,13 @@
 				<h3 class="tracking-wide">Svelte-Forge</h3>
 			</div>
 			<div class="flex items-center space-x-1">
-				<Button variant="link">Analytics</Button>
-				<Button variant="link">Dashboard</Button>
-				<Button variant="link">Sales</Button>
+				<Button variant="link" class="hidden xl:flex">Analytics</Button>
+				<Button variant="link" class="hidden xl:flex">Dashboard</Button>
+				<Button variant="link" class="hidden xl:flex">Sales</Button>
 			</div>
 		</div>
 		<div class="flex items-center space-x-2">
-			<Button variant="outline" class="flex items-center gap-x-2">
+			<Button variant="outline" class="hidden items-center gap-x-2 2xl:flex">
 				<UserRoundPlus />
 				Invite a friend
 			</Button>
@@ -117,13 +111,13 @@
 
 	<!-- Customer Heading -->
 	<section class="mb-2 mt-4 flex w-full flex-col">
-		<h1 class="text-3xl font-bold tracking-wide">Customers</h1>
-		<h2 class="italic">This is a component preview using ShadCn Svelte</h2>
+		<h1 class="text-xl font-bold tracking-wide xl:text-3xl">Customers</h1>
+		<h2 class="text-sm italic xl:text-lg">This is a component preview using ShadCn Svelte</h2>
 	</section>
 
 	<!-- Metrics & Date-picker -->
-	<section class="grid w-full grid-cols-3 gap-6">
-		<Card.Root class="transition duration-500 hover:bg-secondary">
+	<section class="grid w-full grid-cols-1 gap-4 lg:grid-cols-2 xl:grid-cols-3 xl:gap-6">
+		<Card.Root class="col-span-1 transition duration-500 hover:bg-secondary">
 			<Card.Header>
 				<div class="flex w-full items-center justify-between">
 					<div>
@@ -142,7 +136,7 @@
 				</div>
 			</Card.Content>
 		</Card.Root>
-		<Card.Root class="transition duration-500 hover:bg-secondary">
+		<Card.Root class="hidden transition duration-500 hover:bg-secondary lg:inline-block">
 			<Card.Header>
 				<div class="flex w-full items-center justify-between">
 					<div>
@@ -161,7 +155,7 @@
 				</div>
 			</Card.Content>
 		</Card.Root>
-		<Card.Root class="transition duration-500 hover:bg-secondary">
+		<Card.Root class="hidden transition duration-500 hover:bg-secondary xl:inline-block">
 			<Card.Header>
 				<div class="flex w-full items-center justify-between">
 					<div>
@@ -198,7 +192,7 @@
 			</Popover.Content>
 		</Popover.Root>
 		<Input type="email" placeholder="email" />
-		<div class="flex justify-between space-x-2">
+		<div class="hidden justify-between space-x-2 lg:col-span-2 xl:col-span-1 xl:flex">
 			<Button>
 				<Search class="mr-2 h-4 w-4" />
 				Search
@@ -218,7 +212,7 @@
 				<Select.Input name="favoriteFruit" />
 			</Select.Root>
 		</div>
-		<div class="col-span-2">
+		<div class="lg:col-span-2">
 			<Table.Root>
 				<Table.Header>
 					<Table.Row>
@@ -240,7 +234,7 @@
 				</Table.Body>
 			</Table.Root>
 		</div>
-		<Card.Root class="w-full">
+		<Card.Root class="w-full lg:col-span-2 xl:col-span-1">
 			<Card.Header>
 				<Card.Title>Create project</Card.Title>
 				<Card.Description>Deploy your new project in one-click.</Card.Description>
@@ -248,10 +242,6 @@
 			<Card.Content>
 				<form>
 					<div class="grid w-full items-center gap-4">
-						<div class="flex flex-col space-y-1.5">
-							<Label for="name">Name</Label>
-							<Input id="name" placeholder="Name of your project" />
-						</div>
 						<div class="flex flex-col space-y-1.5">
 							<Label for="framework">Animals</Label>
 							<Select.Root>
