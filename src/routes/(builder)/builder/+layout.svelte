@@ -10,9 +10,9 @@
 	<SideNavigation />
 	<section class="flex h-full w-full flex-col">
 		<Navbar />
-		<div class="flex h-[calc(100vh-60px)] w-full overflow-auto">
-			<SideMenu />
+		<div class="flex h-[calc(100vh-60px)] w-full overflow-auto lg:flex-row">
 			<Toaster />
+			<SideMenu />
 			<section class="h-full w-full overflow-auto">
 				<slot></slot>
 			</section>

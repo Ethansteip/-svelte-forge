@@ -20,7 +20,7 @@
 	<a href="/" class="flex w-1/3 items-center justify-center text-secondary-foreground">
 		Svelte builder
 	</a>
-	<div class="flex w-1/3 items-center justify-end gap-x-3">
+	<div class="hidden w-1/3 items-center justify-end gap-x-3 lg:flex">
 		<a href="/">login</a>
 		<a href="/">Register</a>
 		<a href="/">About</a>

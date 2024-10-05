@@ -21,9 +21,9 @@
 	];
 </script>
 
-<section class="flex h-full w-full flex-col">
+<section class="flex h-full w-full flex-col overflow-auto">
 	<div class="flex h-full w-full flex-col p-3">
-		<Card.Root class="flex h-full flex-col justify-between">
+		<Card.Root class="flex h-full flex-col justify-between overflow-auto">
 			<div>
 				<Card.Header>
 					<Card.Title>Create Your new Sveltekit app</Card.Title>
@@ -33,7 +33,7 @@
 					<div class="grid w-full items-center gap-4">
 						<div class="flex flex-col space-y-1.5">
 							<Label for="name">Project Name</Label>
-							<Input id="name" placeholder="Name of your project" />
+							<Input id="name" placeholder="Name of your project" autofocus />
 						</div>
 						<div class="flex flex-col space-y-1.5">
 							<Label for="framework">Sveltekit version</Label>

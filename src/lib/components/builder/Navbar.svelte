@@ -7,11 +7,11 @@
 </script>
 
 <nav class="flex h-16 w-full items-center justify-between border-b px-4">
-	<div class="flex w-1/3 items-center justify-start gap-x-4">
+	<div class="flex w-full items-center justify-start gap-x-4 lg:w-1/3">
 		<Button href="/" size="icon" variant="outline"><ChevronLeft class="text-primary" /></Button>
 		<h3 class="font-lg font-semibold">Svelte-Forge</h3>
 	</div>
-	<div class="items center flex w-1/3 justify-center">
+	<div class="hidden w-1/3 items-center justify-center lg:flex">
 		<ToggleGroup.Root type="single" bind:value={$togglePreviewSize}>
 			<ToggleGroup.Item
 				value="Mobile"
@@ -36,7 +36,7 @@
 			</ToggleGroup.Item>
 		</ToggleGroup.Root>
 	</div>
-	<div class="flex w-1/3 items-center justify-end gap-x-2">
+	<div class="hidden w-1/3 items-center justify-end gap-x-2 lg:flex">
 		<Tooltip.Root>
 			<Tooltip.Trigger asChild let:builder>
 				<Button

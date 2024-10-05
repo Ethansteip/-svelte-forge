@@ -5,7 +5,7 @@
 	import { Paintbrush2, Layers2, Zap, Database, Anvil } from 'lucide-svelte';
 </script>
 
-<div class="flex h-full w-16 flex-col items-center justify-between border-r py-3">
+<div class="hidden h-full w-16 flex-col items-center justify-between border-r py-3 lg:flex">
 	<div class="flex h-1/3 flex-col gap-y-3">
 		<Tooltip.Root>
 			<Tooltip.Trigger asChild let:builder>
