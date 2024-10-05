@@ -33,7 +33,7 @@
 					<div class="grid w-full items-center gap-4">
 						<div class="flex flex-col space-y-1.5">
 							<Label for="name">Project Name</Label>
-							<Input id="name" placeholder="Name of your project" autofocus />
+							<Input id="name" placeholder="Name of your project" />
 						</div>
 						<div class="flex flex-col space-y-1.5">
 							<Label for="framework">Sveltekit version</Label>
