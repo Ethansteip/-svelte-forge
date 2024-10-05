@@ -107,7 +107,7 @@
 					</div>
 				</Card.Content>
 			</div>
-			<Card.Footer class="hidden items-baseline justify-between lg:flex">
+			<Card.Footer class="flex items-baseline justify-between">
 				<Button variant="outline">Cancel</Button>
 				<Button>Next</Button>
 			</Card.Footer>

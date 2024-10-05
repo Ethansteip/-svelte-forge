@@ -45,12 +45,12 @@
 			{:else if $page.url.pathname === '/builder/backend'}
 				<p>Backend</p>
 			{/if}
-			<Drawer.Footer class="pt-2">
+			<!-- <Drawer.Footer class="pt-2">
 				<Button>Next</Button>
 				<Drawer.Close asChild let:builder>
 					<Button variant="outline" builders={[builder]}>Cancel</Button>
 				</Drawer.Close>
-			</Drawer.Footer>
+			</Drawer.Footer> -->
 		</Drawer.Content>
 	</Drawer.Root>
 {/if}
