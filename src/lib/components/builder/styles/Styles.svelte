@@ -83,7 +83,7 @@
 										aria-label="toggle-daisy"
 									/>
 									<Flower class="mb-2" />
-									Daisy Ui
+									Daisy <span class="hidden lg:flex">Ui</span>
 								</Label>
 								<Label
 									for="tailwind"
@@ -107,7 +107,7 @@
 					</div>
 				</Card.Content>
 			</div>
-			<Card.Footer class="flex items-baseline justify-between">
+			<Card.Footer class="hidden items-baseline justify-between lg:flex">
 				<Button variant="outline">Cancel</Button>
 				<Button>Next</Button>
 			</Card.Footer>
