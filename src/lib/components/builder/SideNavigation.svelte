@@ -2,7 +2,7 @@
 	import Button from '../ui/button/button.svelte';
 	import * as Tooltip from '$lib/components/ui/tooltip';
 	import { page } from '$app/stores';
-	import { Paintbrush2, Layers2, Zap, Database, Anvil } from 'lucide-svelte';
+	import { Layers2, Database, Anvil } from 'lucide-svelte';
 </script>
 
 <div class="hidden h-full w-16 flex-col items-center justify-between border-r py-3 lg:flex">

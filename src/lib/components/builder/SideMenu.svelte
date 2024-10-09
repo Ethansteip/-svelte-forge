@@ -26,12 +26,12 @@
 		<Drawer.Trigger asChild let:builder>
 			<Button
 				variant="default"
-				size="icon"
-				class="z-100 absolute bottom-10 right-10 shadow-xl"
+				size="icon-large"
+				class="absolute bottom-10 right-10 z-[500] rounded-full shadow-xl"
 				builders={[builder]}><Pencil /></Button
 			>
 		</Drawer.Trigger>
-		<Drawer.Content>
+		<Drawer.Content class="z-[1000]">
 			<!-- <Drawer.Header class="text-left">
 				<Drawer.Description>
 					<Drawer.Title>Welcome to Svelte-Forge!</Drawer.Title>
@@ -45,12 +45,17 @@
 			{:else if $page.url.pathname === '/builder/backend'}
 				<p>Backend</p>
 			{/if}
-			<!-- <Drawer.Footer class="pt-2">
-				<Button>Next</Button>
+			<Drawer.Footer class="pt-22 flex flex-row justify-between gap-x-3">
+				{#if $page.url.pathname.includes('/whats-your-style')}
+					<Button class="w-1/3" href="/" variant="outline">Cancel</Button>
+				{:else}
+					<Button class="w-1/3" href="/builder/whats-your-style" variant="outline">Back</Button>
+				{/if}
 				<Drawer.Close asChild let:builder>
-					<Button variant="outline" builders={[builder]}>Cancel</Button>
+					<Button class="w-1/3" variant="ghost" builders={[builder]}>Preview</Button>
 				</Drawer.Close>
-			</Drawer.Footer> -->
+				<Button class="w-1/3" href="/builder/pages">Next</Button>
+			</Drawer.Footer>
 		</Drawer.Content>
 	</Drawer.Root>
 {/if}

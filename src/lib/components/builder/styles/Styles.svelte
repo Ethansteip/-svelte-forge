@@ -107,10 +107,10 @@
 					</div>
 				</Card.Content>
 			</div>
-			<Card.Footer class="flex items-baseline justify-between">
+			<!-- <Card.Footer class="flex items-baseline justify-between">
 				<Button variant="outline">Cancel</Button>
 				<Button>Next</Button>
-			</Card.Footer>
+			</Card.Footer> -->
 		</Card.Root>
 	</div>
 </section>
