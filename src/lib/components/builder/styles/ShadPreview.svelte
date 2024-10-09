@@ -111,7 +111,7 @@
 
 	<!-- Customer Heading -->
 	<section class="mb-2 mt-4 flex w-full flex-col">
-		<h1 class="text-xl font-bold tracking-wide xl:text-3xl">Customers</h1>
+		<h1 class="text-xl font-bold tracking-wide xl:text-3xl">Dashboard</h1>
 		<h2 class="text-sm italic xl:text-lg">This is a component preview using ShadCn Svelte</h2>
 	</section>
 

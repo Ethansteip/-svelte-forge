@@ -1,4 +1,4 @@
-<div class="navbar rounded-xl bg-base-100">
+<div class="navbar rounded-xl bg-base-100 shadow">
 	<div class="navbar-start">
 		<div class="dropdown">
 			<div tabindex="0" role="button" class="btn btn-circle btn-ghost">
@@ -17,10 +17,7 @@
 					/>
 				</svg>
 			</div>
-			<ul
-				tabindex="1"
-				class="menu dropdown-content menu-sm z-[1] mt-3 w-52 rounded-box bg-base-100 p-2 shadow"
-			>
+			<ul class="menu dropdown-content menu-sm z-[1] mt-3 w-52 rounded-box bg-base-100 p-2 shadow">
 				<li><a href="#id">Homepage</a></li>
 				<li><a href="#id">Portfolio</a></li>
 				<li><a href="#id">About</a></li>
