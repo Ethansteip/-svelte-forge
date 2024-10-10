@@ -8,9 +8,10 @@
 		<h1 class="text-xl font-semibold lg:text-3xl">Dashboard</h1>
 		<h2 class="italic">This is a component preview using Daisy Ui</h2>
 	</div>
+
 	<section class="grid w-full grid-cols-1 gap-4 lg:grid-cols-2 xl:grid-cols-3 xl:gap-6">
 		<!-- metrics -->
-		<div class="stats mt-3 w-full shadow">
+		<div class="stats col-span-1 mt-3 w-full shadow lg:col-span-2 xl:col-span-3">
 			<div class="stat">
 				<div class="stat-figure text-secondary">
 					<svg
@@ -75,11 +76,68 @@
 			</div>
 		</div>
 
-		<!-- code snippet -->
-		<div class="mockup-code">
-			<pre data-prefix="$"><code>npm i daisyui</code></pre>
-			<pre data-prefix=">" class="text-warning"><code>installing...</code></pre>
-			<pre data-prefix=">" class="text-success"><code>Done!</code></pre>
+		<!-- code snippet & inputs -->
+		<div class="flex flex-col gap-4">
+			<div class="mockup-code">
+				<pre data-prefix="$"><code>npm i daisyui</code></pre>
+				<pre data-prefix=">" class="text-warning"><code>installing...</code></pre>
+				<pre data-prefix=">" class="text-success"><code>Done!</code></pre>
+			</div>
+			<!-- Alert -->
+			<div role="alert" class="alert alert-info">
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					fill="none"
+					viewBox="0 0 24 24"
+					class="h-6 w-6 shrink-0 stroke-current"
+				>
+					<path
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						stroke-width="2"
+						d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+					></path>
+				</svg>
+				<span>New software update available.</span>
+			</div>
+			<!-- Alert -->
+			<div role="alert" class="alert">
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					fill="none"
+					viewBox="0 0 24 24"
+					class="h-6 w-6 shrink-0 stroke-info"
+				>
+					<path
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						stroke-width="2"
+						d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+					></path>
+				</svg>
+				<span>we use cookies for no reason.</span>
+				<div>
+					<button class="btn btn-sm">Deny</button>
+					<button class="btn btn-primary btn-sm">Accept</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="card w-full bg-base-100 shadow-xl">
+			<figure>
+				<img
+					src="https://images.pexels.com/photos/1194420/pexels-photo-1194420.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+					alt="Shoes"
+				/>
+			</figure>
+			<div class="card-body">
+				<h2 class="card-title">Lorem Ipsum</h2>
+				<p>is simply dummy text of the printing and typesetting industry.</p>
+				<div class="card-actions mt-1 justify-end">
+					<button class="btn btn-primary">Buy Now</button>
+					<button class="btn btn-secondary">Buy Now</button>
+				</div>
+			</div>
 		</div>
 	</section>
 </section>
